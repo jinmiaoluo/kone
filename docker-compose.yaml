@@ -1,0 +1,10 @@
+version: '3'
+services:
+  kone:
+    image: kone:latest
+    build: .
+    restart: always
+    container_name: kone
+    network_mode: "host"
+    volumes:
+      - ./example.ini /etc/example.ini
